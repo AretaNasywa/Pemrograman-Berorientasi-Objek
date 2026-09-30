@@ -2,38 +2,38 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Tugas6;
 
 /**
  *
- * @author acer
+ * @author LENOVO
  */
 public class Produk {
+    private String namaProduk;
+    private double harga;
 
-    protected String nama;
-    protected double harga;
-
-    public Produk(String nama, double harga) {
-        this.nama = nama;
+    public Produk(String namaProduk, double harga) {
+        this.namaProduk = namaProduk;
         this.harga = harga;
     }
 
-    public String getNama() {
-        return nama;
+    public String getNamaProduk() {
+        return namaProduk;
+    }
+
+    public void setNamaProduk(String namaProduk) {
+        this.namaProduk = namaProduk;
     }
 
     public double getHarga() {
         return harga;
     }
 
-    // Metode dasar hitungDiskon (akan di-override oleh kelas turunan)
-    public double hitungDiskon() {
-        return 0; // Default tidak ada diskon
+    public void setHarga(double harga) {
+        this.harga = harga;
     }
 
-    // Metode untuk menghitung harga akhir setelah diskon
-    public double getHargaSetelahDiskon() {
-        return harga - hitungDiskon();
+    public void tampilkanInfo() {
+        System.out.println("Nama Produk: " + namaProduk);
+        System.out.println("Harga: " + (long) harga);
     }
 }
-
