@@ -2,30 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+package TugasPraktikum10;
 
 /**
  *
  * @author LENOVO
  */
-public class Elektronik extends Produk {
-    private int garansi;
-
-    public Elektronik(String namaProduk, double harga, int garansi) {
-        super(namaProduk, harga);
-        this.garansi = garansi;
-    }
-
-    public int getGaransi() {
-        return garansi;
-    }
-
-    public void setGaransi(int garansi) {
-        this.garansi = garansi;
-    }
-
+   // Kelas Elektronik menghitung pajak 10%
+public class Elektronik implements Pembayaran {
     @Override
-    public void tampilkanInfo() {
-        super.tampilkanInfo();
-        System.out.println("Garansi: " + garansi + " tahun");
+    public double hitungPajak(double harga) {
+        return harga * 0.10; // Pajak 10%
     }
 }
+
